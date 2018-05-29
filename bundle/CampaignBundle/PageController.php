@@ -56,7 +56,7 @@ class PageController extends Controller
 	public function clearCookieAction() 
 	{
       	$request = $this->Request();
-		setcookie('_user', '', time(), '/', $request->getDomain());
+		setcookie('w_user', '', time(), '/', $request->getDomain());
 		$this->statusPrint('success');
 	}
 }
