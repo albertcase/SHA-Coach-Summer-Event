@@ -36,7 +36,7 @@ define("REDIS_PORT", '6379');
 define("DBHOST", '127.0.0.1');
 define("DBUSER", 'root');
 define("DBPASS", '');
-define("DBNAME", 'coach_minnie_campaign');
+define("DBNAME", 'coach_summer_event');
 
 //Wechat Authorize
 define("CALLBACK", 'wechat/callback');

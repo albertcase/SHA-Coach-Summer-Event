@@ -50,6 +50,12 @@ class Request
 		return $domain;
 	}
 
+	public function getPort() {
+		$domain = $_SERVER['HTTP_HOST'];
+		$port = strpos($domain, ':');
+		return $port ? $port : '';	
+	}
+
 	public function getUrl($absolute = false){
 		if($absolute) {
 			return $url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];

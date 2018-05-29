@@ -28,24 +28,16 @@ class ApiController extends Controller
         $reservationRawList = $help->getReservationList();
         $reservationList = [];
         if(!empty($reservationRawList)) {
-            $i = 0;
-            $name = '';
             foreach ($reservationRawList as $value) {
-                if($name && $value['name'] != $name) {
-                    $i = 0;
-                }
-                $reservationList[$value['name']][$i]['date'] = $value['date'];
-                $reservationList[$value['name']][$i]['time'] = $value['title'];
-                $reservationList[$value['name']][$i]['id'] = $value['id'];
                 $start = $value['date'] . ' ' . $value['start'];
                 $end = $value['date'] . ' ' . $value['end'];
                 if(NOWTIME > $end || $value['quota'] <= $value['used']) {
-                    $reservationList[$value['name']][$i]['has_quota'] =  false;
+                    $has_quota =  false;
                 } else {
-                    $reservationList[$value['name']][$i]['has_quota'] =  true;
+                    $has_quota =  true;
                 }
-                $name = $value['name'];
-                $i++;
+                $reservationList[$value['name']][$value['date']][] = ['time' => $value['title'], 'id' => $value['id'], 'has_quota' => $has_quota];
+
             }
         }
         $this->dataPrint($reservationList);
