@@ -32,12 +32,7 @@ class PageController extends Controller
 			$reservationData = $help->normalizeReservationData($reservation);
 			return $this->render('is_apply', ['data' => $reservationData]);
 		}		
-		$isOld = $help->isOldOpenid($user->openid); 
-		if($isOld) {
-			return $this->render('old_apply');
-		} else {
-			return $this->render('apply');
-		}
+		return $this->render('apply');
 	}
 
 	// 二维码预约结果页面
