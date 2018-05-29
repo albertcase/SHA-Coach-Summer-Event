@@ -8,9 +8,9 @@
 	function shopReset(val){
 		if(!val){
 			getClass('select-date').setAttribute('disabled', 'disabled');
-			getClass('select-num').setAttribute('disabled', 'disabled');
 		}
-		
+
+		getClass('select-num').setAttribute('disabled', 'disabled');
 		getClass('select-date').value = '';
 		getClass('select-num').value = '';
 		getClass('date').value = '';
@@ -48,6 +48,7 @@
 				shopReset(selectValue);
 			}
 
+			// console.log(attr, selectValue);
 			if(attr == 'shop' && selectValue){
 				getClass('select-date').removeAttribute('disabled');
 				queryQuotaData.getDate(selectValue);
@@ -161,7 +162,8 @@
 	    ajax('POST', '/api/submit', data, function(result){
 	        if(result.status == 200){
 	            formErrorTips('数据提交成功！');
-	            console.log(result);
+	            // console.log(result);
+	            location.href = '/qrcode';
 	            // submitSuccess(result.data.name, result.data.date, result.data.shop);
 	        }
 	    });

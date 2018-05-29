@@ -5,77 +5,78 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
-    <title>Coach X Disney 限时嘉年华</title>
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+    <title>Coach蔻驰</title>
+    <link href = "/web/css/base.css" rel="stylesheet" type="text/css">
+    <link href = "/web/css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://coach.samesamechina.com/api/v1/js/2f515ea7-bbbb-45a5-aed2-4988576b856d/wechat"></script>
+    <script>
+      !function(){function a(){document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+"px";if(document.documentElement.clientWidth>1080){document.documentElement.style.fontSize='100px'}}var b=null;window.addEventListener("resize",function(){clearTimeout(b),b=setTimeout(a,10)},!1),a()}(window);
+    </script>
 </head>
-<link href = "http://cdn.minnie.coach.samesamechina.com/web/build/css/style.css" rel="stylesheet" type="text/css">
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?af79bb9343e57f0fd2c393165d9cbbd4";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
 
-<!-- 引入适配方案-->
-<script src="http://cdn.minnie.coach.samesamechina.com/web/lib/lib-flexible/flexible.js"></script>
-<script type="text/javascript" src="http://coach.samesamechina.com/api/v1/js/2f515ea7-bbbb-45a5-aed2-4988576b856d/wechat"></script>
 <body>
 <div id="wrapper">
-    
-    <!-- 横屏代码 -->
-    <div id="orientLayer" class="mod-orient-layer">
-        <div class="mod-orient-layer__content">
-            <i class="icon mod-orient-layer__icon-orient"></i>
-            <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览<br><em>建议全程在wifi环境下观看</em></div>
-        </div>
-    </div>
-
-
-    <section data-page="index">
-
+    <div class="dreambox">
+        
         <div class="logo"></div>
+        
+        <div class="context ycenter">
+            <div class="resultArea">
 
-        <div class="form-reserve clearfix">
-            <div class="logo-brand"></div>   
-
-            <div class="reserve-success">
                 <?php if($status == 200): ?>
-                    <div class="success-theme">
-                        预约成功
+
+                    <div class="result-header">
+                        尊敬的顾客，您已预约成功
+                        <div class="whiteLine"></div>
                     </div>
-                    <div class="success-text">
-                        亲爱的<?php print $item->name;?> <br />
-                        <?php print $item->date;?><br />
-                        <?php print $item->shop;?>店铺期待您的莅临！
+                    <div class="result-desc">
+                        出示此页面即可兑换夏日冰品一份<br>
+                        数量有限，先到先得
                     </div>
+                    <div class="result-footer">
+                        <?php print $item->date;?>，<br>
+                        <?php print $item->shop;?>期待您的莅临！
+                    </div>
+
                     
                     <div class="codeConfirm">
                       <input type="tel" maxlength="3" class="checkInCode">
                       <a href="javascript:void(0);" class="checkinBtn">打卡</a>
                     </div>
-
-                    <script src="/web/build/js/common.js"></script>
-                    <script src="/web/build/js/checkin.js"></script>
+                    
+                    <script src="/web/js/common.js"></script>
+                    <script src="/web/js/checkin.js"></script>
 
                 <?php endif;?>
                 
                 
 
                 <?php if($status == 0): ?>
-                    <div class="success-text"> 您还未预约当前！<!-- 预约活动已结束！ --></div>
+                    <div class="result-header">
+                        您还未预约当前！
+                    </div>
                 <?php endif;?>
                 <?php if($status == 1): ?>
-                    <div class="success-text"> 您已经核销！<!-- 预约活动已结束！ --></div>
+                    <div class="result-header">
+                        您已经核销！
+                    </div>
                 <?php endif;?>
-                
+
+
             </div>
-            
         </div>
 
-    </section>
+
+        <!-- 横屏代码 -->
+        <div id="orientLayer" class="mod-orient-layer">
+            <div class="mod-orient-layer__content">
+                <i class="icon mod-orient-layer__icon-orient"></i>
+                <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览<br><em>建议全程在wifi环境下观看</em></div>
+            </div>
+        </div>
+    </div>
 </div>
-<script src="http://cdn.minnie.coach.samesamechina.com/web/build/js/common.js"></script>
+
 </body>
 </html>
