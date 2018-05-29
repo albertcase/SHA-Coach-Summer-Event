@@ -168,13 +168,6 @@ class HelpLib
     	$submit = new \stdClass();
         $submit->uid = $user->uid;
         $submit->item_id = $data->id;
-        if($old = $this->isOldOpenid($user->openid)) {
-            $submit->name = $old->name;
-            $submit->phone = $old->phone;
-        } else {
-            $submit->name = $data->name;
-            $submit->phone = $data->phone;
-        }
 		$submit->created = NOWTIME;
 		$submit->updated = NOWTIME;
 		$helper = new Helper();
@@ -185,15 +178,9 @@ class HelpLib
             if($reservationData) {
                 $sendData = new \stdClass();
                 $sendData->openid = $user->openid;
-                $sendData->name = $reservationData->name;
-                if(strpos($reservationData->phone, '****')) {
-                    $sendData->phone = $reservationData->phone;
-                } else {
-                    $sendData->phone = substr_replace($reservationData->phone, '****', 3, 4);
-                }
                 $sendData->date = $reservationData->date;
                 $sendData->shop = $reservationData->shop;
-                $this->sendMessage($sendData);
+                //$this->sendMessage($sendData);
                 return $reservationData;
             }
         }
