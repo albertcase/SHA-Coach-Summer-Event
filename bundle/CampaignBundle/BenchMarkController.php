@@ -15,7 +15,7 @@ class BenchMarkController extends Controller
         $this->_pdo = PDO::getInstance();
     }
 
-    public function benchMarkAction()
+    public function benchmarkAction()
     {
         $data = file_get_contents("php://input"); 
         $data = $data ? $data : 'test';
