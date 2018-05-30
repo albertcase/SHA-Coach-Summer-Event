@@ -20,4 +20,4 @@ $routers['/api/quota'] = array('CampaignBundle\Api', 'quota'); //预约数量
 $routers['/api/submit'] = array('CampaignBundle\Api', 'submit'); //预约
 $routers['/api/checkin'] = array('CampaignBundle\Api', 'checkin'); //预约
 
-$routers['/api/benchmark'] = array('CampaignBundle\Api', 'benchmark'); //预约
+$routers['/api/benchmark'] = array('CampaignBundle\BenchMark', 'benchmark'); //预约
