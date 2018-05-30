@@ -17,8 +17,9 @@ class BenchMarkController extends Controller
 
     public function benchMarkAction()
     {
+        $data = file_get_contents("php://input"); 
         $sql = "INSERT `benchmark` SET data = :data AND created = :created";
         $query = $this->_pdo->prepare($sql);    
-        return $query->execute([':data' => 'test', ':created' => NOWTIME]);
+        return $query->execute([':data' => $data, ':created' => NOWTIME]);
     }
 }
