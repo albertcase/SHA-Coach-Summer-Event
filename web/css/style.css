@@ -228,6 +228,7 @@ html,body{
     margin: .24rem 0 0 0;
     background: #d3919d;
     display: inline-block;
+    position: relative;
     font-size: .3rem;
 }
 
@@ -252,6 +253,21 @@ html,body{
     display: inline-block;
 }
 
+.checkinBtn.isloading:after{
+	width: 100%;
+    height: 100%;
+    line-height: .7rem;
+    content: '数据提交中...';
+    background: rgba(255,255,255, .5);
+    position: absolute;
+    font-size: .27rem;
+    color: #666;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+
+
 .copyright{
 	width: 5.04rem;
 	height: .2rem;
@@ -265,7 +281,20 @@ html,body{
 
 
 
-
+.btn.isloading:before{
+    width: 100%;
+    height: 100%;
+    line-height: .9rem;
+    content: '数据提交中...';
+    background: #ebd16b;
+    position: absolute;
+    font-size: .27rem;
+    color: #666;
+    border-radius: .22rem;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
 
 
 

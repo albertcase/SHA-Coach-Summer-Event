@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="footer">
-                <a href="javascript:void(0);" class="order_btn">一键预约</a>
+                <a href="javascript:void(0);" class="btn order_btn">一键预约</a>
             </div>
         </div>
 

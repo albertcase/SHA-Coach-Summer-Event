@@ -87,13 +87,19 @@
 		}else if(!num || num == ''){
 			formErrorTips('请选择场次！');
 		}else{
+			if(orderBtn.className.indexOf('isloading') < 0){
+				orderBtn.className += ' isloading';
+			}
+			
 			submitForm({ id: numId });
 		}
 	}
 
 	var orderBtn = document.querySelector('.order_btn');
 	orderBtn.addEventListener('click', function(){
-		check();
+		if(orderBtn.className.indexOf('isloading') < 0){
+			check();
+		}
 	})
 
 
@@ -156,16 +162,13 @@
 
 
 
-
-
 	function submitForm(data){
 	    ajax('POST', '/api/submit', data, function(result){
 	        if(result.status == 200){
 	            formErrorTips('数据提交成功！');
-	            // console.log(result);
 	            location.href = '/qrcode';
-	            // submitSuccess(result.data.name, result.data.date, result.data.shop);
 	        }
+	        orderBtn.className = orderBtn.className.replace(' isloading', '');
 	    });
 	}
 
