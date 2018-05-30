@@ -35,10 +35,16 @@
       align-items: center;
 }
 
-
+html,body{
+	width: 100%;
+	height: 100%;
+	background: #be657e;
+	position: relative;
+}
 
 .dreambox{
 	width: 7.5rem;
+	height: 100%;
 	background: #be657e;
 	margin: 0 auto;
 	position: relative;
@@ -245,6 +251,22 @@
     line-height: .6rem;
     display: inline-block;
 }
+
+.copyright{
+	width: 5.04rem;
+	height: .2rem;
+	background: url("../img/copyright-text.png") center no-repeat;
+	background-size: 100% auto;
+	position: absolute;
+	left: 50%;
+	bottom: -.5rem;
+	margin: 0 0 0 -2.52rem;
+}
+
+
+
+
+
 
 
 

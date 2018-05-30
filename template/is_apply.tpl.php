@@ -36,6 +36,7 @@
                     <?php print $data->shop;?>期待您的莅临！
                 </div>
             </div>
+            <div class="copyright"></div>
         </div>
 
 
