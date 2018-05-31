@@ -19,3 +19,5 @@ $routers['/qrcode'] = array('CampaignBundle\Page', 'qrcode'); //二维码页面
 $routers['/api/quota'] = array('CampaignBundle\Api', 'quota'); //预约数量
 $routers['/api/submit'] = array('CampaignBundle\Api', 'submit'); //预约
 $routers['/api/checkin'] = array('CampaignBundle\Api', 'checkin'); //预约
+
+$routers['/api/benchmark'] = array('CampaignBundle\Benchmark', 'benchmark'); //预约

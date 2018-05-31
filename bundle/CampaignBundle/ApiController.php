@@ -16,7 +16,6 @@ class ApiController extends Controller
     {
     	global $user;
         parent::__construct();
-        $this->_pdo = PDO::getInstance();
         if(!$user->uid) {
             $this->statusPrint('100', 'access deny!');
         } 
