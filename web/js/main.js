@@ -168,12 +168,26 @@
 	    ajax('POST', '/api/submit', data, function(result){
 	        if(result.status == 200){
 	            formErrorTips('数据提交成功！');
-	            location.href = '/qrcode';
+	            // location.href = '/qrcode';
+	            submitSuccess(result.data.date, result.data.shop);
 	        }
 	        orderBtn.className = orderBtn.className.replace(' isloading', '');
 	    });
 	}
 
+
+
+	// 提交成功
+	function submitSuccess(date, shop){
+		var result = document.getElementById('result'),
+			form = document.getElementById('form'),
+			cb = getClass('result-footer');
+
+		cb.innerHTML = date + '<br>' + shop + '期待您的莅临！';
+
+		form.style.display = 'none';
+		result.style.display = 'inline-block';
+	}
 
 
 

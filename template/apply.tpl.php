@@ -22,62 +22,67 @@
         
         <div class="logo"></div>
         
-        <div class="context" style="display: none;">
-            <div class="resultArea">
-                <div class="result-header">
-                    尊敬的顾客<br>
-                    您已预约成功
+        <div id="result" style="display: none;">
+            <div class="context ycenter">
+                <div class="resultArea">
+                    <div class="result-header">
+                        尊敬的顾客<br>
+                        您已预约成功
+                        <div class="whiteLine"></div>
+                    </div>
+                    <div class="result-desc">
+                        出示此页面即可兑换夏日冰品一份<br>
+                        数量有限，先到先得
+                    </div>
+                    <div class="result-footer">
+                        X月X日XX时，<br>
+                        XXX店铺期待您的莅临！
+                    </div>
                 </div>
-                <div class="result-desc">
-                    出示此页面即可兑换夏日冰品一份<br>
-                    数量有限，先到先得
-                </div>
-                <div class="result-footer">
-                    X月X日XX时，<br>
-                    XXX店铺期待您的莅临！
-                </div>
+                <div class="copyright"></div>
             </div>
         </div>
-
-        <div class="context">
-            <div class="header">预约夏日冰品<br>开启清凉一夏</div>
-            <div class="section formArea">
-                <div class="input-group">
-                    <label for="shop_select">店铺</label>
-                    <div class="input-block">
-                        <select name="shop_select" class="select-el select-shop" data-type="shop">
-                            <option></option>
-                            <option>上海</option>
-                            <option>广州</option>
-                        </select>
-                        <input type="text" name="shop" class="shop" placeholder="请选择店铺">
+        <div id="form">
+            <div class="context">
+                <div class="header">预约夏日冰品<br>开启清凉一夏</div>
+                <div class="section formArea">
+                    <div class="input-group">
+                        <label for="shop_select">店铺</label>
+                        <div class="input-block">
+                            <select name="shop_select" class="select-el select-shop" data-type="shop">
+                                <option></option>
+                                <option>上海</option>
+                                <option>广州</option>
+                            </select>
+                            <input type="text" name="shop" class="shop" placeholder="请选择店铺">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="date_select">日期</label>
+                        <div class="input-block">
+                            <select name="date_select" class="select-el select-date" disabled data-type="date">
+                                <option></option>
+                                <option>上海</option>
+                                <option>广州</option>
+                            </select>
+                            <input type="text" name="date" class="date" placeholder="请选择日期">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="num_select">场次</label>
+                        <div class="input-block">
+                            <select name="num_select" class="select-el select-num" disabled data-type="num">
+                                <option></option>
+                                <option>上海</option>
+                                <option>广州</option>
+                            </select>
+                            <input type="text" name="num" class="num" placeholder="请选择场次">
+                        </div>
                     </div>
                 </div>
-                <div class="input-group">
-                    <label for="date_select">日期</label>
-                    <div class="input-block">
-                        <select name="date_select" class="select-el select-date" disabled data-type="date">
-                            <option></option>
-                            <option>上海</option>
-                            <option>广州</option>
-                        </select>
-                        <input type="text" name="date" class="date" placeholder="请选择日期">
-                    </div>
+                <div class="footer">
+                    <a href="javascript:void(0);" class="btn order_btn">一键预约</a>
                 </div>
-                <div class="input-group">
-                    <label for="num_select">场次</label>
-                    <div class="input-block">
-                        <select name="num_select" class="select-el select-num" disabled data-type="num">
-                            <option></option>
-                            <option>上海</option>
-                            <option>广州</option>
-                        </select>
-                        <input type="text" name="num" class="num" placeholder="请选择场次">
-                    </div>
-                </div>
-            </div>
-            <div class="footer">
-                <a href="javascript:void(0);" class="btn order_btn">一键预约</a>
             </div>
         </div>
 
