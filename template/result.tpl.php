@@ -23,7 +23,7 @@
         
         <div class="context ycenter">
             <div class="resultArea">
-
+                <script src="/web/js/common.js"></script>
                 <?php if($status == 200): ?>
 
                     <div class="result-header">
@@ -45,7 +45,7 @@
                       <a href="javascript:void(0);" class="checkinBtn">打卡</a>
                     </div>
                     
-                    <script src="/web/js/common.js"></script>
+                    
                     <script src="/web/js/checkin.js"></script>
 
                 <?php endif;?>
