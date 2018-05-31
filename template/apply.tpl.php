@@ -7,8 +7,8 @@
     <meta content="telephone=no,email=no" name="format-detection">
     <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
     <title>Coach蔻驰</title>
-    <link href = "/web/css/base.css" rel="stylesheet" type="text/css">
-    <link href = "/web/css/style.css" rel="stylesheet" type="text/css">
+    <link href = "http://cdn.minnie.coach.samesamechina.com/web/css/base.css" rel="stylesheet" type="text/css">
+    <link href = "http://cdn.minnie.coach.samesamechina.com/web/css/style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://coach.samesamechina.com/api/v1/js/2f515ea7-bbbb-45a5-aed2-4988576b856d/wechat"></script>
     <script>
       !function(){function a(){document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+"px";if(document.documentElement.clientWidth>1080){document.documentElement.style.fontSize='100px'}}var b=null;window.addEventListener("resize",function(){clearTimeout(b),b=setTimeout(a,10)},!1),a()}(window);
@@ -17,6 +17,7 @@
 
 <body>
 <div id="wrapper">
+    
     <div class="dreambox">
         
         <div class="logo"></div>
@@ -89,9 +90,11 @@
             </div>
         </div>
     </div>
+
+
 </div>
-<script src="/web/js/common.js"></script>
-<script src="/web/js/main.js"></script>
+<script src="http://cdn.minnie.coach.samesamechina.com/web/js/common.js"></script>
+<script src="http://cdn.minnie.coach.samesamechina.com/web/js/main.js"></script>
 
 </body>
 </html>

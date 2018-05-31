@@ -1,5 +1,7 @@
 ;(function(){
 
+
+
 	function getClass(el){
 		return document.querySelector('.' + el);
 	}
