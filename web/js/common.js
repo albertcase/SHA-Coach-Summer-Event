@@ -140,6 +140,7 @@ wrapper.addEventListener( 'touchmove', function (ev) {
 // 日期转换为星期
 function getDay(date){
     var dayArr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+    date += '';
     var getDay = new Date(date).getDay();
     return dayArr[getDay];
 }
