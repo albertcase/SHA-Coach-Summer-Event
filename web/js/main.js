@@ -41,6 +41,8 @@
 			if(attr == 'num'){
 				getClass(attr).value = selectText;
 				getClass(attr).setAttribute('data-id', selectValue);
+			}else if(attr == 'date'){
+				getClass(attr).value = selectText;
 			}else{
 				getClass(attr).value = selectValue;
 			}
@@ -143,7 +145,7 @@
 			dateData = ['<option></option>'];
 
 		for(var date in data){
-			dateData.push('<option>'+ date +'</option>');
+			dateData.push('<option value="'+ date +'">'+ date + ' ' + getDay(date) +'</option>');
 		}
 		
 		getClass('select-date').innerHTML = dateData.join('');
