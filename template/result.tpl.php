@@ -23,7 +23,7 @@
         
         <div class="context ycenter">
             <div class="resultArea">
-                <script src="/web/js/common.js"></script>
+                <script src="http://cdn.minnie.coach.samesamechina.com/web/js/common.js"></script>
                 <?php if($status == 200): ?>
 
                     <div class="result-header">
@@ -35,7 +35,7 @@
                         数量有限，先到先得
                     </div>
                     <div class="result-footer">
-                        <?php print $item->date;?><br>
+                        <?php print $item->date;?> <span class="get-day"></span><br>
                         <?php print $item->shop;?>期待您的莅临！
                     </div>
 
@@ -46,7 +46,12 @@
                     </div>
                     
                     
-                    <script src="/web/js/checkin.js"></script>
+                    <script src="http://cdn.minnie.coach.samesamechina.com/web/js/checkin.js"></script>
+                    <script type="text/javascript">
+                        var getDayEl = document.querySelector('.get-day'),
+                            rdate = '<?php print $item->date;?>';
+                        getDayEl.innerHTML = getDay(rdate);
+                    </script>
 
                 <?php endif;?>
                 
@@ -78,6 +83,10 @@
         </div>
     </div>
 </div>
+
+
+
+
 
 </body>
 </html>

@@ -32,7 +32,7 @@
                     数量有限，先到先得
                 </div>
                 <div class="result-footer">
-                    <?php print $data->date;?><br>
+                    <?php print $data->date;?> <span class="get-day"></span><br>
                     <?php print $data->shop;?>期待您的莅临！
                 </div>
             </div>
@@ -50,6 +50,11 @@
     </div>
 </div>
 <script src="http://cdn.minnie.coach.samesamechina.com/web/js/common.js"></script>
+<script type="text/javascript">
+    var getDayEl = document.querySelector('.get-day'),
+        rdate = '<?php print $data->date;?>';
+    getDayEl.innerHTML = getDay(rdate);
+</script>
 
 
 </body>

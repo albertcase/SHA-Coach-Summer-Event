@@ -183,12 +183,11 @@
 			form = document.getElementById('form'),
 			cb = getClass('result-footer');
 
-		cb.innerHTML = date + '<br>' + shop + '期待您的莅临！';
+		cb.innerHTML = date + ' ' + getDay(date) + '<br>' + shop + '期待您的莅临！';
 
 		form.style.display = 'none';
 		result.style.display = 'inline-block';
 	}
-
 
 
 
