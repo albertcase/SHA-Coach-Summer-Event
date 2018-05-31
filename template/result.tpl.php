@@ -35,7 +35,7 @@
                         数量有限，先到先得
                     </div>
                     <div class="result-footer">
-                        <?php print $item->date;?>，<br>
+                        <?php print $item->date;?><br>
                         <?php print $item->shop;?>期待您的莅临！
                     </div>
 
