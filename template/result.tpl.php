@@ -49,9 +49,11 @@
                     <script src="http://cdn.minnie.coach.samesamechina.com/web/js/checkin.js"></script>
                     <script type="text/javascript">
                         var getDayEl = document.querySelector('.get-day'),
-                            rdate = parseInt('<?php print $item->date;?>', 10);
+                            rdate = '<?php print $item->date;?>';
                             alert(rdate);
-                            alert(new Date(rdate));
+                            alert(rdate.substr(0,10));
+                            alert(new Date('2018-06-12'));
+                            alert(new Date('2018-06-12(15:00-16:00)'));
                         getDayEl.innerHTML = getDay(rdate);
                     </script>
 
