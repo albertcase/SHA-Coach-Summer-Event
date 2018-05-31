@@ -50,7 +50,7 @@ class HelpLib
         LEFT JOIN store s on s.id = i.sid
         LEFT JOIN times t on t.id = i.tid
         WHERE i.date >= :date 
-        ORDER BY s.id, i.id ASC";
+        ORDER BY s.weight, i.id ASC";
         $query = $this->_pdo->prepare($sql);
         $query->execute([':date' => $date]);
         $data = $query->fetchAll(\PDO::FETCH_ASSOC);
