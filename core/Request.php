@@ -110,7 +110,7 @@ class Request
 
 	public function setSourceUrl($url, $type = 'cookie') {
 		if($type == 'cookie') {
-			setcookie("redirect_url", $url, time() + 3600*8, '/');
+			setcookie("redirect_url", $url, time() + 3600*8, '/', $this->getHost());
 		}
 	}
 
