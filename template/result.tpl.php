@@ -50,7 +50,7 @@
                     <script type="text/javascript">
                         var getDayEl = document.querySelector('.get-day'),
                             rdate = '<?php print $item->date;?>';
-                            alert(getDay(rdate));
+                            alert(rdate);
                         getDayEl.innerHTML = getDay(rdate);
                     </script>
 
