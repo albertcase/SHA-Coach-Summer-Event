@@ -49,7 +49,7 @@
                     <script src="http://cdn.minnie.coach.samesamechina.com/web/js/checkin.js"></script>
                     <script type="text/javascript">
                         var getDayEl = document.querySelector('.get-day'),
-                            rdate = '<?php print $item->date;?>';
+                            rdate = parseInt('<?php print $item->date;?>', 10);
                             alert(rdate);
                             alert(new Date(rdate));
                         getDayEl.innerHTML = getDay(rdate);
