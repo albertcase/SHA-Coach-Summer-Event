@@ -45,7 +45,7 @@ class HelpLib
 
     public function getReservationList() 
     {
-        $date = date('Y-m-d');
+        $date = date('Y-m-d', strtotime(NOWTIME));
         $sql = "SELECT s.name, i.date, t.title, i.used, i.quota, i.id, t.start, t.end FROM items i 
         LEFT JOIN store s on s.id = i.sid
         LEFT JOIN times t on t.id = i.tid
