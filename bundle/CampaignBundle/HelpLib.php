@@ -191,7 +191,7 @@ class HelpLib
                 $sendData->openid = $user->openid;
                 $sendData->date = $reservationData->date;
                 $sendData->shop = $reservationData->shop;
-                $this->sendMessage($sendData);
+                //$this->sendMessage($sendData);
                 return $reservationData;
             }
         }
