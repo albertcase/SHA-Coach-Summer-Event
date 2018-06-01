@@ -41,6 +41,8 @@
 			if(attr == 'num'){
 				getClass(attr).value = selectText;
 				getClass(attr).setAttribute('data-id', selectValue);
+			}else if(attr == 'date'){
+				getClass(attr).value = selectText;
 			}else{
 				getClass(attr).value = selectValue;
 			}
@@ -109,8 +111,6 @@
 	/* 
 	 * 获取api数据
 	 */
-	var dataPackage;
-
 	function QueryQuotaData(){
 		this.allData = null;
 		this.init = function(){
@@ -143,7 +143,7 @@
 			dateData = ['<option></option>'];
 
 		for(var date in data){
-			dateData.push('<option>'+ date +'</option>');
+			dateData.push('<option value="'+ date +'">'+ date + ' ' + getDay(date) +'</option>');
 		}
 		
 		getClass('select-date').innerHTML = dateData.join('');
@@ -183,12 +183,11 @@
 			form = document.getElementById('form'),
 			cb = getClass('result-footer');
 
-		cb.innerHTML = date + '<br>' + shop + '期待您的莅临！';
+		cb.innerHTML = date + ' ' + getDay(date) + '<br>' + shop + '期待您的莅临！';
 
 		form.style.display = 'none';
 		result.style.display = 'inline-block';
 	}
-
 
 
 
