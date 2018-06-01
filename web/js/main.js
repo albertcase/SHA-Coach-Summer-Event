@@ -111,8 +111,6 @@
 	/* 
 	 * 获取api数据
 	 */
-	var dataPackage;
-
 	function QueryQuotaData(){
 		this.allData = null;
 		this.init = function(){
