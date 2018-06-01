@@ -143,7 +143,7 @@
 			dateData = ['<option></option>'];
 
 		for(var date in data){
-			dateData.push('<option value="'+ date +'">'+ date + ' ' + getDay(date) +'</option>');
+			dateData.push('<option value="'+ date +'">'+ date +'</option>');
 		}
 		
 		getClass('select-date').innerHTML = dateData.join('');
@@ -183,7 +183,7 @@
 			form = document.getElementById('form'),
 			cb = getClass('result-footer');
 
-		cb.innerHTML = date + ' ' + getDay(date) + '<br>' + shop + '期待您的莅临！';
+		cb.innerHTML = date + '<br>' + shop + '期待您的莅临！';
 
 		form.style.display = 'none';
 		result.style.display = 'inline-block';

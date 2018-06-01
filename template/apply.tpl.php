@@ -61,8 +61,8 @@
                         <div class="input-block">
                             <select name="shop_select" class="select-el select-shop" data-type="shop">
                                 <option></option>
-                                <option>上海</option>
-                                <option>广州</option>
+                                <!-- <option>上海</option>
+                                <option>广州</option> -->
                             </select>
                             <input type="text" name="shop" class="shop" placeholder="请选择店铺">
                         </div>
@@ -72,8 +72,8 @@
                         <div class="input-block">
                             <select name="date_select" class="select-el select-date" disabled data-type="date">
                                 <option></option>
-                                <option>上海</option>
-                                <option>广州</option>
+                                <!-- <option>上海</option>
+                                <option>广州</option> -->
                             </select>
                             <input type="text" name="date" class="date" placeholder="请选择日期">
                         </div>
@@ -83,8 +83,8 @@
                         <div class="input-block">
                             <select name="num_select" class="select-el select-num" disabled data-type="num">
                                 <option></option>
-                                <option>上海</option>
-                                <option>广州</option>
+                                <!-- <option>上海</option>
+                                <option>广州</option> -->
                             </select>
                             <input type="text" name="num" class="num" placeholder="请选择场次">
                         </div>
