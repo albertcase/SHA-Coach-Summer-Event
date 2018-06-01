@@ -100,7 +100,7 @@
 	}
 
 	var orderBtn = document.querySelector('.order_btn');
-	orderBtn.addEventListener('click', function(){
+	orderBtn.addEventListener('touchstart', function(){
 		if(orderBtn.className.indexOf('isloading') < 0){
 			check();
 		}
