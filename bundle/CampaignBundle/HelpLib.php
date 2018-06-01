@@ -206,7 +206,7 @@ class HelpLib
         $data = array(
             'touser' => $sendData->openid,
             'template_id' => 'OGosN3rcb0KwyRfBXriyPIJdc4dtf5P5qpGt635_FUU',
-            'url' => 'http://minnie.coach.samesamechina.com/qrcode',
+            'url' => 'http://summer.coach.samesamechina.com/qrcode',
             'topcolor' => '#000000',
             'data' => array(
                 'first' => array(
