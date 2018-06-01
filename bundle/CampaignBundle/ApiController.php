@@ -16,9 +16,9 @@ class ApiController extends Controller
     {
     	global $user;
         parent::__construct();
-        // if(!$user->uid) {
-        //     $this->statusPrint('100', 'access deny!');
-        // } 
+        if(!$user->uid) {
+            $this->statusPrint('100', 'access deny!');
+        } 
     }
 
     public function quotaAction()

@@ -189,9 +189,11 @@ class HelpLib
             if($reservationData) {
                 $sendData = new \stdClass();
                 $sendData->openid = $user->openid;
+                $sendData->name = $reservationData->name;
+                $sendData->phone = $reservationData->phone;
                 $sendData->date = $reservationData->date;
                 $sendData->shop = $reservationData->shop;
-                //$this->sendMessage($sendData);
+                $this->sendMessage($sendData);
                 return $reservationData;
             }
         }
