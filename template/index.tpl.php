@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>xxxx</title>
+	<title>Coach夏日派对</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!--禁用手机号码链接(for iPhone)-->
 	<meta name="format-detection" content="telephone=no">
