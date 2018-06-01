@@ -20,6 +20,9 @@ function submitForm(data){
             formErrorTips('打卡成功！');
             document.querySelector('.codeConfirm').style.visibility = 'hidden';
             document.querySelector('.codeConfirm').style.display = 'none';
+
+            document.querySelector('.success-model').style.display = 'none';
+            document.querySelector('.pre-order').className = 'pre-order';
         }else{
             formErrorTips('打卡失败，打卡码有误！');
             document.querySelector('.checkInCode').value = '';

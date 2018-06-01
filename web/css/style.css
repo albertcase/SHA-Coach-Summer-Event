@@ -17,8 +17,6 @@
     /*letter-spacing: 0.1em;*/
 }
 
-
-
 .ycenter{
 	/* Center slide text vertically */
       display: -webkit-box;
@@ -300,6 +298,8 @@ html,body{
     z-index: 5;
 }
 
-
+.hide{
+	display: none;
+}
 
 
