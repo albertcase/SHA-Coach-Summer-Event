@@ -187,13 +187,6 @@ class HelpLib
             $this->addUsed($reservation->item_id);
             $reservationData = $this->normalizeReservationData($reservation);
             if($reservationData) {
-                $sendData = new \stdClass();
-                $sendData->openid = $user->openid;
-                $sendData->name = $reservationData->name;
-                $sendData->phone = $reservationData->phone;
-                $sendData->date = $reservationData->date;
-                $sendData->shop = $reservationData->shop;
-                $this->sendMessage($sendData);
                 return $reservationData;
             }
         }

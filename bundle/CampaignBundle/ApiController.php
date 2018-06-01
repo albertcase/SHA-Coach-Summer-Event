@@ -92,9 +92,12 @@ class ApiController extends Controller
         }
 
     	if($re = $help->submit($apiData)) {
-            $this->dataPrint(['status' => 200, 'data' => $re]);
+            $openid = $user->openid;
+            $this->dataPrint(['status' => 200, 'data' => $re], function() use ($help, $re, $openid) {
+                $re->openid = $openid;
+                $help->sendMessage($re);
+            });
         }
-
         $this->statusPrint('105', '预约失败！');
         
     }

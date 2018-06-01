@@ -27,9 +27,9 @@ class Controller
 		$this->Response()->statusPrint($status, $msg);
 	}
 
-	public function dataPrint($data) 
+	public function dataPrint($data, $terminate_call = null) 
 	{
-		$this->Response()->dataPrint($data);
+		$this->Response()->dataPrint($data, $terminate_call);
 	}
 
 	public function redirect($uri) 

@@ -28,10 +28,14 @@ class Response
 		exit;
 	}
 
-	public function dataPrint($data) 
+	public function dataPrint($data, $terminate_call = null) 
 	{
 		header("Content-type: application/json");
 		print json_encode($data);
+		if($terminate_call) {
+			fastcgi_finish_request();
+			$terminate_call();		
+		}
 		exit;
 	}
 
