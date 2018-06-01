@@ -9,13 +9,15 @@ use CampaignBundle\HelpLib;
 $help = new HelpLib();
 
 $date = date('Y-m-d', strtotime('next day'));
+// $date = '2018-06-09';
 $notificationList = $help->getNotificationList($date);
 
 foreach($notificationList as $notification) {
+    $notification['date'] = $help->nomorlizeDate($notification['date']).' ('.$notification['title'].')';
     $re = sendMessage($notification);
     if($re->code == 200 && $re->data->errcode == 0) {
         $help->updateSendStatus($notification['id']);
-        echo "{$re->code} - {$notification['name']} - {$notification['date']} {$notification['title']}\n";
+        echo "{$re->code} - {$notification['openid']} - {$notification['date']} {$notification['title']}\n";
     }
 }
 
@@ -36,11 +38,11 @@ function sendMessage($data) {
                 'color' => '#000000'
             ),
             'keyword1' => array(
-                'value' => $data['name'],
+                'value' => '尊敬的顾客',
                 'color' => '#000000'
             ),
             'keyword2' => array(
-                'value' => $data['date'] . ' ' . $data['title'],
+                'value' => $data['date'],
                 'color' => '#000000'
             ),
             'remark' => array(
