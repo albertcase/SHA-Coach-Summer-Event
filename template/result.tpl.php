@@ -78,7 +78,7 @@
                           <a href="javascript:void(0);" class="checkinBtn">打卡</a>
                         </div>
 
-                        <script src="/web/js/checkin.js"></script>
+                        <script src="http://cdn.minnie.coach.samesamechina.com/web/js/checkin.js"></script>
                     </div>
                 <?php endif;?>
 
