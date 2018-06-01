@@ -16,9 +16,9 @@ class ApiController extends Controller
     {
     	global $user;
         parent::__construct();
-        if(!$user->uid) {
-            $this->statusPrint('100', 'access deny!');
-        } 
+        // if(!$user->uid) {
+        //     $this->statusPrint('100', 'access deny!');
+        // } 
     }
 
     public function quotaAction()
@@ -35,7 +35,7 @@ class ApiController extends Controller
                 } else {
                     $has_quota =  true;
                 }
-                $reservationList[$value['name']][$value['date']][] = ['time' => $value['title'], 'id' => $value['id'], 'has_quota' => $has_quota];
+                $reservationList[$value['name']][$help->nomorlizeDate($value['date'])][] = ['time' => $value['title'], 'id' => $value['id'], 'has_quota' => $has_quota];
 
             }
         }

@@ -23,11 +23,18 @@ class HelpLib
 
     public function isCheckin($uid)
     {
-        $sql = "SELECT 1 FROM `reservation` WHERE `uid` = :uid and `checkin` = 1";
+        $sql = "SELECT 1 FROM `checkin` WHERE `uid` = :uid";
         $query = $this->_pdo->prepare($sql);    
         $query->execute([':uid' => $uid]);
         $row = $query->fetch(\PDO::FETCH_ASSOC);
         return $row;      
+    }
+
+    public function checkin($uid)
+    {
+        $sql = "INSERT `checkin` SET uid = :uid, created = NOW()";
+        $query = $this->_pdo->prepare($sql);    
+        return $query->execute([':uid' => $uid]);
     }
 
 	// 检查是否为预先导入的openid
@@ -145,19 +152,23 @@ class HelpLib
     public function normalizeReservationData($reservation)
     {
         $data = new \stdClass();
-        $data->name = isset($reservation->name) ? $reservation->name : '';
-        $data->phone = isset($reservation->phone) ? $reservation->phone : '';
+        $data->name = '尊敬的顾客';
+        $data->phone = '******';
         $item = $this->findItemById($reservation->item_id);
-        $data->date = $item->date.'('.$item->title.')';
+        $data->date = $this->nomorlizeDate($item->date).' ('.$item->title.')';
         $data->shop = $item->name;
         return $data;
     }
 
-    public function checkin($uid)
+    public function getWeekDay($date)
     {
-        $sql = "UPDATE `reservation` SET checkin = 1, updated = NOW() WHERE `uid` = :uid";
-        $query = $this->_pdo->prepare($sql);    
-        return $query->execute([':uid' => $uid]);
+        $weekarray = array("日", "一", "二", "三", "四", "五", "六");
+        return "星期".$weekarray[date("w", strtotime($date))];
+    }
+
+    public function nomorlizeDate($date)
+    {
+        return $date.' '.$this->getWeekDay($date);
     }
 
     // 预约
@@ -180,7 +191,7 @@ class HelpLib
                 $sendData->openid = $user->openid;
                 $sendData->date = $reservationData->date;
                 $sendData->shop = $reservationData->shop;
-                //$this->sendMessage($sendData);
+                $this->sendMessage($sendData);
                 return $reservationData;
             }
         }
@@ -197,7 +208,7 @@ class HelpLib
             'topcolor' => '#000000',
             'data' => array(
                 'first' => array(
-                    'value' => "尊敬的贵宾，您已成功预约Coach x Disney嘉年华，我们期待与你共度玩趣时尚的美妙时光。\n",
+                    'value' => "尊敬的顾客，您已成功预约Coach夏日派对，我们期待与你清凉一夏！\n",
                     'color' => '#000000'
                 ),
                 'keyword1' => array(
@@ -209,7 +220,7 @@ class HelpLib
                     'color' => '#000000'
                 ),
                 'keyword3' => array(
-                    'value' => 'Coach x Disney嘉年华',
+                    'value' => 'Coach夏日派对',
                     'color' => '#000000'
                 ),
                 'keyword4' => array(
