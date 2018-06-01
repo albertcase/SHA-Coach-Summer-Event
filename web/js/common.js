@@ -143,8 +143,6 @@ function getDay(date){
     var arrIndex = date.indexOf('(');
     date = date.substr(0, arrIndex);
     var gd = new Date(date).getDay();
-    alert(date);
-    alert(gd);
     return dayArr[gd];
 }
 
