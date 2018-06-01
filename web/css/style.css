@@ -215,6 +215,10 @@ html,body{
 	margin: .6rem 0 .16rem 0;
 }
 
+.result-desc.noOrder{
+	margin: .1rem 0 .1rem 0;
+}
+
 .result-desc, .result-footer{
 	font-size: .27rem;
 	line-height: .42rem;

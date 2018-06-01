@@ -63,7 +63,18 @@
 
                 <?php if($status == 0): ?>
                     <div class="result-header">
-                        您还未预约当前！
+                        尊敬的顾客完成以下任务之一<br>
+                        即可获享夏日冰品一份<br>
+                        数量有限，先到先得
+                    </div>
+                    <div class="result-desc noOrder">
+                        1.活动期间至COACH店铺任意消费<br>
+                        2.活动期间至COACH店铺寻找火烈鸟合影<br>
+                        并分享至微信朋友圈或微博
+                    </div>
+                    <div class="codeConfirm">
+                      <input type="tel" maxlength="3" class="checkInCode">
+                      <a href="javascript:void(0);" class="checkinBtn">打卡</a>
                     </div>
                 <?php endif;?>
                 <?php if($status == 1): ?>
