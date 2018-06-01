@@ -143,7 +143,7 @@
 			dateData = ['<option></option>'];
 
 		for(var date in data){
-			dateData.push('<option value="'+ date +'">'+ date + ' ' + getDay(date) +'</option>');
+			dateData.push('<option value="'+ date +'">'+ date +'</option>');
 		}
 		
 		getClass('select-date').innerHTML = dateData.join('');
@@ -170,6 +170,8 @@
 	            formErrorTips('数据提交成功！');
 	            // location.href = '/qrcode';
 	            submitSuccess(result.data.date, result.data.shop);
+	        }else{
+	        	formErrorTips('数据提交失败！');
 	        }
 	        orderBtn.className = orderBtn.className.replace(' isloading', '');
 	    });
@@ -183,7 +185,7 @@
 			form = document.getElementById('form'),
 			cb = getClass('result-footer');
 
-		cb.innerHTML = date + ' ' + getDay(date) + '<br>' + shop + '期待您的莅临！';
+		cb.innerHTML = date + '<br>' + shop + '期待您的莅临！';
 
 		form.style.display = 'none';
 		result.style.display = 'inline-block';
