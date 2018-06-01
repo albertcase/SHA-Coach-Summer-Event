@@ -170,6 +170,8 @@
 	            formErrorTips('数据提交成功！');
 	            // location.href = '/qrcode';
 	            submitSuccess(result.data.date, result.data.shop);
+	        }else{
+	        	formErrorTips('数据提交失败！');
 	        }
 	        orderBtn.className = orderBtn.className.replace(' isloading', '');
 	    });
