@@ -42,11 +42,11 @@ class PageController extends Controller
 		$applyRes = new \stdClass(); //预约结果
 		$help = new HelpLib();
 		$reservation = $help->findReservationByUid($user->uid);
-		if(!$reservation) {
-			return $this->render('result', ['status' => 0, 'msg' => '抱歉，你未预约！']);
-		}
 		if($help->isCheckin($user->uid)) {
 			return $this->render('result', ['status' => 1, 'msg' => '您已经核销！']);
+		}
+		if(!$reservation) {
+			return $this->render('result', ['status' => 0, 'msg' => '抱歉，你未预约！']);
 		}
 		if($reservationData = $help->normalizeReservationData($reservation)) {
 			return $this->render('result', ['status' => 200, 'item' => $reservationData]);

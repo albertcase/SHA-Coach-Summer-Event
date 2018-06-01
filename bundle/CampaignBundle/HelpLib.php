@@ -23,11 +23,18 @@ class HelpLib
 
     public function isCheckin($uid)
     {
-        $sql = "SELECT 1 FROM `reservation` WHERE `uid` = :uid and `checkin` = 1";
+        $sql = "SELECT 1 FROM `checkin` WHERE `uid` = :uid";
         $query = $this->_pdo->prepare($sql);    
         $query->execute([':uid' => $uid]);
         $row = $query->fetch(\PDO::FETCH_ASSOC);
         return $row;      
+    }
+
+    public function checkin($uid)
+    {
+        $sql = "INSERT `checkin` SET uid = :uid, created = NOW()";
+        $query = $this->_pdo->prepare($sql);    
+        return $query->execute([':uid' => $uid]);
     }
 
 	// 检查是否为预先导入的openid
@@ -151,13 +158,6 @@ class HelpLib
         $data->date = $item->date.'('.$item->title.')';
         $data->shop = $item->name;
         return $data;
-    }
-
-    public function checkin($uid)
-    {
-        $sql = "UPDATE `reservation` SET checkin = 1, updated = NOW() WHERE `uid` = :uid";
-        $query = $this->_pdo->prepare($sql);    
-        return $query->execute([':uid' => $uid]);
     }
 
     // 预约
