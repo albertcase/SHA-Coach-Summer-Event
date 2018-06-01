@@ -152,12 +152,23 @@ class HelpLib
     public function normalizeReservationData($reservation)
     {
         $data = new \stdClass();
-        $data->name = isset($reservation->name) ? $reservation->name : '';
-        $data->phone = isset($reservation->phone) ? $reservation->phone : '';
+        $data->name = '尊敬的顾客';
+        $data->phone = '******';
         $item = $this->findItemById($reservation->item_id);
-        $data->date = $item->date.'('.$item->title.')';
+        $data->date = $this->nomorlizeDate($item->date).' ('.$item->title.')';
         $data->shop = $item->name;
         return $data;
+    }
+
+    public function getWeekDay($date)
+    {
+        $weekarray = array("日", "一", "二", "三", "四", "五", "六");
+        return "星期".$weekarray[date("w", strtotime($date))];
+    }
+
+    public function nomorlizeDate($date)
+    {
+        return $date.' '.$this->getWeekDay($date);
     }
 
     // 预约
@@ -180,7 +191,7 @@ class HelpLib
                 $sendData->openid = $user->openid;
                 $sendData->date = $reservationData->date;
                 $sendData->shop = $reservationData->shop;
-                //$this->sendMessage($sendData);
+                $this->sendMessage($sendData);
                 return $reservationData;
             }
         }
@@ -197,7 +208,7 @@ class HelpLib
             'topcolor' => '#000000',
             'data' => array(
                 'first' => array(
-                    'value' => "尊敬的贵宾，您已成功预约Coach x Disney嘉年华，我们期待与你共度玩趣时尚的美妙时光。\n",
+                    'value' => "尊敬的顾客，您已成功预约Coach夏日派对，我们期待与你清凉一夏！\n",
                     'color' => '#000000'
                 ),
                 'keyword1' => array(
@@ -209,7 +220,7 @@ class HelpLib
                     'color' => '#000000'
                 ),
                 'keyword3' => array(
-                    'value' => 'Coach x Disney嘉年华',
+                    'value' => 'Coach夏日派对',
                     'color' => '#000000'
                 ),
                 'keyword4' => array(

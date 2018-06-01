@@ -32,7 +32,7 @@ function sendMessage($data) {
         'topcolor' => '#000000',
         'data' => array(
             'first' => array(
-                'value' => "尊敬的顾客，您预约的Coach x Disney嘉年华即将开始。",
+                'value' => "尊敬的顾客，您预约的Coach夏日派对即将开始。",
                 'color' => '#000000'
             ),
             'keyword1' => array(
@@ -44,7 +44,7 @@ function sendMessage($data) {
                 'color' => '#000000'
             ),
             'remark' => array(
-                'value' => "期待与你共度玩趣时尚的美妙时光。",
+                'value' => "期待与你清凉一夏！",
                 'color' => '#000000'
             )
 
@@ -67,7 +67,7 @@ function sendMessage($data) {
     curl_setopt ( $ch, CURLOPT_POSTFIELDS, json_encode($data) );
     $return = curl_exec ( $ch );
     return $return;
-    curl_close ( $ch );
+    curl_close ($ch);
 }
 
 /**
