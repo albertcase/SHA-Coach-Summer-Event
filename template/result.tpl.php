@@ -76,6 +76,8 @@
                       <input type="tel" maxlength="3" class="checkInCode">
                       <a href="javascript:void(0);" class="checkinBtn">打卡</a>
                     </div>
+
+                    <script src="http://cdn.minnie.coach.samesamechina.com/web/js/checkin.js"></script>
                 <?php endif;?>
                 <?php if($status == 1): ?>
                     <div class="result-header">
