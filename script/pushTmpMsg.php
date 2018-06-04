@@ -34,7 +34,7 @@ function sendMessage($data) {
         'topcolor' => '#000000',
         'data' => array(
             'first' => array(
-                'value' => "尊敬的顾客，您预约的Coach夏日派对即将开始。",
+                'value' => "尊敬的顾客，Coach夏日派对即将开始，你已预约夏日冰品一份。",
                 'color' => '#000000'
             ),
             'keyword1' => array(

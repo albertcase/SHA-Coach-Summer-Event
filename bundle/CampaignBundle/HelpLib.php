@@ -203,7 +203,7 @@ class HelpLib
             'topcolor' => '#000000',
             'data' => array(
                 'first' => array(
-                    'value' => "尊敬的顾客，您已成功预约Coach夏日派对，我们期待与你清凉一夏！\n",
+                    'value' => "尊敬的顾客，您已成功预约夏日冰品一份，我们期待与你相约Coach夏日派对！\n",
                     'color' => '#000000'
                 ),
                 'keyword1' => array(
