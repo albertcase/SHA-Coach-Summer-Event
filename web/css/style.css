@@ -198,8 +198,8 @@ html,body{
 }
 
 .result-header em{
-	font-size: .2rem;
 	font-style: normal;
+	font-size: .12rem;
 }
 
 .whiteLine{
