@@ -215,7 +215,7 @@ class HelpLib
                     'color' => '#000000'
                 ),
                 'keyword3' => array(
-                    'value' => 'Coach夏日派对',
+                    'value' => '夏日冰品一份',
                     'color' => '#000000'
                 ),
                 'keyword4' => array(
