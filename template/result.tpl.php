@@ -66,7 +66,7 @@
                         <div class="result-header">
                             完成以下任务之一<br>
                             即可获享夏日冰品一份<br>
-                            <em>数量有限</em>，先到先得
+                            <em>数量有限，先到先得</em>
                         </div>
                         <div class="result-desc noOrder">
                             1.活动期间至COACH店铺任意消费<br>
