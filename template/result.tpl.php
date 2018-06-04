@@ -64,9 +64,9 @@
                 <?php if($status == 0): ?>
                     <div class="success-model">
                         <div class="result-header">
-                            尊敬的顾客完成以下任务之一<br>
+                            完成以下任务之一<br>
                             即可获享夏日冰品一份<br>
-                            数量有限，先到先得
+                            <em>数量有限</em>，先到先得
                         </div>
                         <div class="result-desc noOrder">
                             1.活动期间至COACH店铺任意消费<br>
