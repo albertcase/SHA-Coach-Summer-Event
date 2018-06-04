@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
     <title>Coach夏日派对</title>
     <link href = "http://cdn.minnie.coach.samesamechina.com/web/css/base.css" rel="stylesheet" type="text/css">
-    <link href = "/web/css/style.css" rel="stylesheet" type="text/css">
+    <link href = "http://cdn.minnie.coach.samesamechina.com/web/css/style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://coach.samesamechina.com/api/v1/js/2f515ea7-bbbb-45a5-aed2-4988576b856d/wechat"></script>
     <script>
       !function(){function a(){document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+"px";if(document.documentElement.clientWidth>1080){document.documentElement.style.fontSize='100px'}}var b=null;window.addEventListener("resize",function(){clearTimeout(b),b=setTimeout(a,10)},!1),a()}(window);
@@ -64,9 +64,9 @@
                 <?php if($status == 0): ?>
                     <div class="success-model">
                         <div class="result-header">
-                            尊敬的顾客完成以下任务之一<br>
+                            完成以下任务之一<br>
                             即可获享夏日冰品一份<br>
-                            数量有限，先到先得
+                            <em>数量有限，先到先得</em>
                         </div>
                         <div class="result-desc noOrder">
                             1.活动期间至COACH店铺任意消费<br>

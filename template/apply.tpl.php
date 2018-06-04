@@ -108,8 +108,8 @@
 
 
 </div>
-<script src="/web/js/common.js"></script>
-<script src="/web/js/main.js"></script>
+<script src="http://cdn.minnie.coach.samesamechina.com/web/js/common.js"></script>
+<script src="http://cdn.minnie.coach.samesamechina.com/web/js/main.js"></script>
 
 </body>
 </html>

@@ -197,6 +197,11 @@ html,body{
 	position: relative;
 }
 
+.result-header em{
+	font-style: normal;
+	font-size: .27rem;
+}
+
 .whiteLine{
 	content: "";
 	width: 1.12rem;
